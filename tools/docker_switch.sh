@@ -6,7 +6,7 @@ shift
 ARGS_LIST=$@
 case "${DOCKER_PASSHPORT_SWITCH}" in
 	passhportd)
-		su - passhport -c "/home/passhport/passhport/tools/launch_passhportd_docker.sh ${PYTHON_ENV}"
+		/home/passhport/passhport/tools/launch_passhportd_docker.sh ${PYTHON_ENV}
 		;;
 	passhport-admin)
 		su - passhport -c "/home/passhport/passhport/tools/launch_passhport-admin_docker.sh ${PYTHON_ENV} ${ARGS_LIST}"
