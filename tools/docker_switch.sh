@@ -1,5 +1,6 @@
 #!/bin/bash
-PYTHON_ENV=/home/passhport/passhport-run-env
+PYTHON_ENV=$1
+shift
 DOCKER_PASSHPORT_SWITCH=$1
 shift
 ARGS_LIST=$@
