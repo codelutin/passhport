@@ -71,6 +71,8 @@ then
 fi
 
 /usr/sbin/sshd-keygen &>/dev/null
+
+mkdir -p /run/sshd/
 /usr/sbin/sshd
 
 # Launch the passhportd in the virtualenv
