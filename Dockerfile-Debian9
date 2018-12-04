@@ -10,7 +10,7 @@ RUN mkdir -p /var/log/passhport/ ; chown passhport:passhport /var/log/passhport/
 RUN mkdir /etc/passhport ; \
 	cp /home/passhport/passhport/passhportd/passhportd.ini /etc/passhport/. ; \
 	cp /home/passhport/passhport/passhport/passhport.ini /etc/passhport/. ; \
-	cp /home/passhport/passhport/passhport_admin/passhport-admin.ini /etc/passhport/. ; \
+	cp /home/passhport/passhport/passhport-admin/passhport-admin.ini /etc/passhport/. ; \
 	cp /home/passhport/passhport/passhportd/passhportd.ini /etc/passhport/.
 RUN su - passhport -c '/usr/bin/ssh-keygen -t rsa -b 4096 -N "" -f "/home/passhport/.ssh/id_rsa"'
 RUN su - passhport -c '/usr/bin/ssh-keygen -t ecdsa -b 521 -N "" -f "/home/passhport/.ssh/id_ecdsa"'
