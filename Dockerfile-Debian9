@@ -1,7 +1,7 @@
 FROM debian:9
 MAINTAINER Raphaël Berlamont <raphael.berlamont@librit.fr>
 RUN apt update ; apt install -y openssh-server python3-pip git openssl
-RUN pip3 install -U pip ; pip3 install virtualenv
+RUN pip3 install virtualenv
 RUN useradd --home-dir /home/passhport --shell /bin/bash --create-home passhport
 RUN su - passhport -c "virtualenv -p python3 passhport-run-env"
 RUN su - passhport -c "/home/passhport/passhport-run-env/bin/pip install pymysql sqlalchemy-migrate flask-migrate requests docopt configparser tabulate"
