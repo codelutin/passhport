@@ -22,4 +22,4 @@ RUN sed -i -e 's#SQLALCHEMY_DATABASE_DIR\s*=.*#SQLALCHEMY_DATABASE_DIR        = 
 	sed -i -e "s#PASSHPORTD_HOSTNAME\s*=.*#PASSHPORTD_HOSTNAME = `hostname -f`#" /etc/passhport/passhport-admin.ini ; \
 	sed -i -e "s#PASSHPORTD_HOSTNAME\s*=.*#PASSHPORTD_HOSTNAME = `hostname -f`#" /etc/passhport/passhport.ini ; 
 
-ENTRYPOINT ["/home/passhport/passhport/scripts_utils/docker_switch.sh", "/home/passhport/passhport-run-env/bin/python"]
+ENTRYPOINT ["/home/passhport/passhport/tools/docker_switch.sh", "/home/passhport/passhport-run-env/bin/python"]
